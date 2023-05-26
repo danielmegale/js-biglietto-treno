@@ -23,7 +23,7 @@ if (isNaN(userAge) || isNaN(userKm)){
 }
 //Ticket Price
 else{
-    const ticketPrice = userKm * KmPrice;
+    const ticketPrice = (userKm * KmPrice).toFixed(2);
     console.log(ticketPrice);
     element.innerText +=' '+ ticketPrice +'€';
 
@@ -32,14 +32,14 @@ else{
         console.log(coupon);
         newPrice = ticketPrice * coupon;
         console.log(newPrice);
-        couponTicket.innerText +='Biglietto scontato' + ' ' +  newPrice + '€';
+        couponTicket.innerText +='Biglietto scontato' + ' ' +  (newPrice).toFixed(2) + '€';
     }
     else if (userAge >=65){
         coupon = 0.60;
         console.log(coupon);
         newPrice = ticketPrice * coupon;
         console.log(newPrice);
-        couponTicket.innerText +='Biglietto scontato' + ' ' +  newPrice + '€';
+        couponTicket.innerText +='Biglietto scontato' + ' ' +  (newPrice).toFixed(2) + '€';
     }
 }
 
